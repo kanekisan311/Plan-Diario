@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Diario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="plan-diario">
+        <h1>Plan Diario de Actividades</h1>
+        <form id="todo-form">
+            <div class="actividad">
+                <input type="checkbox" id="meditacion" onclick="actualizarEstado('meditacion')">
+                <label for="meditacion">Despertar y Meditación (7:00 a.m. - 7:30 a.m.)</label>
+            </div>
+            <div class="actividad">
+                <input type="checkbox" id="ejercicio" onclick="actualizarEstado('ejercicio')">
+                <label for="ejercicio">Ejercicio Físico (7:30 a.m. - 8:30 a.m.)</label>
+            </div>
+            <div class="actividad">
+                <input type="checkbox" id="desayuno" onclick="actualizarEstado('desayuno')">
+                <label for="desayuno">Desayuno y Reflexión (8:30 a.m. - 9:00 a.m.)</label>
+            </div>
+            <!-- Agregar más actividades de manera similar -->
+            <button type="button" onclick="guardarEstado()">Guardar Estado</button>
+        </form>
+
+        <h2>Notas del Día</h2>
+        <textarea id="notas" rows="4" cols="50"></textarea>
+
+        <h2>Gratitud del Día</h2>
+        <textarea id="gratitud" rows="4" cols="50"></textarea>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
